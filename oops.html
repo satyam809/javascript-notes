@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //class = It defines the characteristics and behavior of a particular type of object
+        // 1)contructor topic
+
+        // class Person {
+        //     constructor(name) {
+        //         console.log(`My name is ${name}`);
+        //     }
+        // }
+
+        // let obj = new Person('satyam');
+
+        // class Person {
+        //     constructor() {
+        //         this.name = "Satyam";
+        //     }
+        // }
+
+        // class Human extends Person {
+        //     constructor(){
+        //         super();
+        //     }
+        //     humanName() {
+        //         return this.name;
+        //     }
+        // }
+        // let obj = new Human();
+        // console.log(obj.humanName())
+
+        // 2) static topic
+
+        // class Gender {
+        //     static Male(){
+        //         return "This is male";
+        //     }
+        // }
+        // console.log(Gender.Male()); // This is male
+
+        // class Gender {
+        //     static Male(){
+        //         return "satyam";
+        //     }
+        //     static female(){
+        //        return  `${Gender.Male()} is Nikita Friend`;
+        //     }
+        // }
+        // console.log(Gender.female()); // satyam is Nikta friend
+
+        // class Gender {
+        //     static  fullname = "Satyam Shivam";
+        //     constructor(){
+        //         console.log(`My name is ${Gender.fullname}`);
+        //     }
+        // }
+        // let gen = new Gender();
+
+        // class Gender {
+        //     static fullname = "satyam";
+        // }
+        // console.log(Gender.fullname); // satyam is
+
+        // 3) encapsulation:Encapsulation is one of the fundamental principles of object-oriented programming (OOP) that aims to bundle data (attributes) and methods (functions) that operate on the data into a single unit called an object.
+
+        // class Person {
+        //     setName(name) {
+        //         this.name = name;
+        //     }
+        //     getName() { return this.name }
+        // }
+        // let obj = new Person();
+        // obj.setName("satyam");
+        // console.log(obj.getName());
+
+        // 4)inheritance: accessing propeties and methods of another class
+        //single inheritance
+        // class Mother{
+        //   motherMessage(){
+        //     return 'hello i am mother';
+        //   }
+        // }
+
+        // class Child extends Mother{
+        //     childMessage(){
+        //         return `${this.motherMessage()}`;
+        //     }
+        // }
+
+        // let obj = new Child();
+        // console.log(obj.childMessage());
+
+        // multiple inheritance: js does not support it. for this we have to use protyping
+
+        // const Mother = {
+        //     motherMessage:()=>{
+        //         return `this is mother`;
+        //     }
+        // }
+        // const Father = {
+        //     fatherMessage:()=>{
+        //         return `this is father`;
+        //     }
+        // }
+
+        // class Child{}
+        // Object.assign(Child.prototype,Mother,Father);
+        // obj = new Child();
+        // console.log(obj.fatherMessage());
+        // console.log(obj.motherMessage());
+
+        //5) Polymorphism in JavaScript is the ability to use the same method name for different purposes, depending on the object that the method is called on. This is achieved through inheritance, where a child class inherits the methods of its parent class.
+
+        //     class Vehicle{
+        //         run(){
+        //             console.log('I am running');
+        //         }
+        //     }
+
+        //     class Car extends Vehicle{
+        //         run(){
+        //             console.log('I am driving');
+        //         }
+        //     }
+        //     class Truck extends Vehicle{
+        //         run(){ console.log('I am hauling');}
+        //     }
+
+        //    obj1 = new Car();
+        //    obj1.run();
+
+        // 6) Abstraction:Abstract classes are classes that cannot be instantiated. They can only be used as a base class for other classes. Abstract classes can contain abstract methods, which are methods that have no implementation. The subclasses of an abstract class must provide implementations for the abstract methods.
+        
+        //7)Interfaces: Interfaces are similar to abstract classes, but they cannot contain any data members. Interfaces only define the methods that a class must implement.
+
+        // abstract class Vehicle {
+        //     abstract run();
+        // }
+
+        // class Car extends Vehicle {
+        //     run() {
+        //         console.log("I am driving!");
+        //     }
+        // }
+
+        // class Truck extends Vehicle {
+        //     run() {
+        //         console.log("I am hauling!");
+        //     }
+        // }
+
+        // let obj = new Truck();
+        // obj.run();
+
+
+
+    </script>
+</body>
+
+</html>

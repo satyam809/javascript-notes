@@ -1,0 +1,45 @@
+In JavaScript, scope refers to the context in which variables are declared and accessed. The scope determines the visibility and lifetime of variables. JavaScript has two main types of scope: global scope and local scope.
+->Global Scope:Variables declared outside of any function or block have global scope. They can be accessed from anywhere in the code, including inside functions and blocks.
+   Example
+    var globalVariable = 10;
+
+    function myFunction() {
+    console.log(globalVariable); // Accessible
+    }
+
+    console.log(globalVariable); // Accessible
+    myFunction();
+    In this example, globalVariable has global scope, so it can be accessed both outside and inside the myFunction.
+->Local Scope:Variables declared inside a function or block have local scope. They are only accessible within that function or block.
+Example
+function myFunction() {
+  var localVar = 20;
+  console.log(localVar); // Accessible
+}
+
+console.log(localVar); // Error: localVar is not defined
+myFunction();
+In this case, localVar is declared inside myFunction, so it's only accessible within that function.
+
+->Block Scope (ES6 and later):Starting from ECMAScript 6 (ES6), JavaScript introduced block-level scope with let and const. Variables declared with let and const are scoped to the nearest enclosing block (typically a pair of curly braces {}).
+
+if (true) {
+  let blockScopedVar = 30;
+  console.log(blockScopedVar); // Accessible
+}
+
+console.log(blockScopedVar); // Error: blockScopedVar is not defined
+
+Here, blockScopedVar is scoped to the if block.
+
+->Function Scope (ES5 and earlier):
+In older versions of JavaScript (ES5 and earlier), variables declared with var have function-level scope, which means they are scoped to the nearest function, not the block.
+function myFunction() {
+  if (true) {
+    var functionScopedVar = 40;
+  }
+  console.log(functionScopedVar); // Accessible
+}
+
+console.log(functionScopedVar); // undefined (not an error)
+myFunction();

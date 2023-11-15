@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // cookies
+        //it's feature of javascript where data is stored in key value pairs to identify user's request. when user sent request to server then cookie is also added to request.Cookie are limited in size and it store information upto 4kb. It's visible and modified by client that's why we should follow server side mechanism  or sessionStorage or localStorage. 
+        // Function to set a cookie
+        function setCookie(name, value, daysToExpire) {
+            const expirationDate = new Date();
+            expirationDate.setDate(expirationDate.getDate() + daysToExpire);
+            const cookieValue = encodeURIComponent(value) + '; expires=' + expirationDate.toUTCString() + '; path=/'; // Added path attribute
+            document.cookie = name + '=' + cookieValue;
+            console.log(document.cookie);
+        }
+
+        // Set a cookie named "username" with the value "John" that expires in 7 days
+        setCookie('username', 'John', 7);
+
+        // // Function to read a cookie value
+        // function getCookie(name) {
+        //     const cookies = document.cookie.split('; ');
+        //     for (const cookie of cookies) {
+        //         const [cookieName, cookieValue] = cookie.split('=');
+        //         if (cookieName === name) {
+        //             return decodeURIComponent(cookieValue);
+        //         }
+        //     }
+        //     return null; // Cookie not found
+        // }
+
+        // // Read the value of the "username" cookie
+        // const username = getCookie('username');
+        // console.log(username); // Output: John
+
+        // Function to delete a cookie
+        // function deleteCookie(name) {
+        //     document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+        // }
+
+        // // Delete the "username" cookie
+        // deleteCookie('username');
+
+
+    </script>
+</body>
+
+</html>

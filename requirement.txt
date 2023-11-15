@@ -1,0 +1,14 @@
+equired Skills:
+
+•	Proven experience in software development of larger software products
+•	Proven experience in Linux development environments
+•	Good hands-on programming experience in JavaScript / Nodejs code.
+•	Prior experience in developing front end using react.js and backend services using node.js modules.
+•	Good in database management (mysql, sql, nosql)
+•	Good knowledge on repository management tools like Git, Bit Bucket, etc.
+•	Good knowledge on CI/CD and DevOps
+•	Excellent debugging skills/strategies.
+•	Excellent communication skills
+•	Experienced in working in an Agile environment.
+•	Prototype, create POCs of possible solutions for complex problems whenever required.
+•	Good knowledge in AWS Platform.

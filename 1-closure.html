@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // closure
+        //  it's javascript feature where inner function access outer function variable event after exection of outer 
+        function outerFunction() {
+            const outerVar = 'I am from outerFunction';
+
+            function innerFunction() {
+                const innerVar = 'I am from innerFunction';
+                console.log(outerVar); // Inner function can access outerVar
+                console.log(innerVar); // Inner function can access innerVar
+            }
+
+            return innerFunction; // Return the inner function from the outer function
+        }
+
+        const closureFunction = outerFunction(); // closureFunction now holds innerFunction
+
+        closureFunction(); // Call the closureFunction
+
+    </script>
+</body>
+
+</html>
